@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='assets/Letter F.jpeg') }}" type="image/jpeg" class="favicon">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='assets/Letter F.jpeg') }}" sizes="180x180" />
+    <meta name="msapplication-TileImage" content="{{ url_for('static', filename='assets/Letter F.jpeg') }}" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <title>slizzy-chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- Landing Page -->
+    <div id="landing-page" class="landing-page">
+        <div class="landing-message">
+            <h1>Hello there!</h1>
+            <img class="logo" src="{{ url_for('static', filename='assets/Letter F.jpeg') }}" alt="FLAQO logo" />
+            <p>I'm slizzy, An E-commerce FAQ Chatbot Assistant.</p>
+        </div>
+        <div class="input-container">
+            <input 
+                type="text" 
+                id="start-input" 
+                placeholder="Click here to start chatting..." 
+                onclick="startChat()" 
+            />
+        </div>
+    </div>
+
+    <!-- Chat Container -->
+    <div id="chat-container" class="chat-container" style="display: none;">
+        <div class="header">
+            <a href="#landing-page"><img class="logo" src="{{ url_for('static', filename='assets/Letter F.jpeg') }}" alt="FLAQO logo"/></a>
+            <nav class="nav">
+                <h2 class="title">slizzy</h2>
+                <h3 class="title">slizzy AI Assistant</h3>
+            </nav>
+    
+        </div>
+        <div id="messages" class="messages"></div>
+        <div class="input-container">
+            <input 
+                type="text" 
+                id="user-input" 
+                placeholder="Ask slizzy..." 
+                onkeypress="handleKeyPress(event)" 
+            />
+            <button class="btn" id="btn" onclick="sendMessage()">
+                <img src="{{ url_for('static', filename='assets/SendLetter.png') }}" alt="Send">
+            </button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script>
+        function startChat() {
+            // Hide the landing page
+            document.getElementById("landing-page").style.display = "none";
+
+            // Show the chat container
+            document.getElementById("chat-container").style.display = "block";
+
+            // Focus on the chat input field
+            document.getElementById("user-input").focus();
+        }
+    </script>
+</body>
+</html>

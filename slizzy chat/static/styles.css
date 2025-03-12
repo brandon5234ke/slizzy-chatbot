@@ -1,0 +1,218 @@
+/* General body styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0; /* Light grey background */
+}
+
+/* Chat container */
+.chat-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 10px;
+  background-color: #ffffff; /* White background */
+  border-color: #cccccc; /* Light grey border */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: none; /* Initially hidden until the chat starts */
+}
+
+/* Landing page styling */
+.landing-page {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px 20px;
+  background-color: #ffffff; /* White background */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: #333333; /* Dark grey text */
+  animation: fadeIn 0.5s ease-in-out; /* Smooth fade-in animation */
+}
+
+/* Landing page logo */
+.landing-page .logo {
+  width: 60px;
+  height: 60px;
+  background-size: contain;
+  border-radius: 30%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+/* Landing page message styles */
+.landing-message h1 {
+  font-size: 1.8rem;
+  color: #333333; /* Dark grey text */
+  margin-bottom: 10px;
+}
+
+.landing-message p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+/* Landing page input container */
+.landing-page .input-container {
+  margin-top: 20px;
+}
+
+.landing-page .input-container input {
+  width: 50%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 20px;
+  border: 1px solid #cccccc; /* Light grey border */
+  outline: none;
+  text-align: center;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.landing-page .input-container input:focus {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  border-color: #999999; /* Darker grey border */
+}
+
+/* Messages area in chat */
+.messages {
+  width: auto;
+  height: 260px;
+  margin: 0px auto;
+  padding: 20px;
+  border-radius: 10px;
+  overflow-y: scroll;
+  background: #ffffff; /* White background */
+  font-family: Arial, sans-serif;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+/* User messages styling */
+.user {
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 15px;
+  max-width: 80%;
+  line-height: 1.4;
+  font-size: 18px;
+  background-color: #007bff; /* Blue background */
+  color: #ffffff; /* White text */
+  align-self: flex-end;
+  overflow-wrap: break-word;
+}
+
+/* Bot messages styling */
+.bot {
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 15px;
+  max-width: 80%;
+  line-height: 1.4;
+  font-size: 18px;
+  background-color: #f1f1f1; /* Light grey background */
+  color: #333333; /* Dark grey text */
+  align-self: flex-start;
+  overflow-wrap: break-word;
+}
+
+/* Input container styling */
+.input-container {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+  margin-top: 0px;
+  background-color: #ffffff; /* White background */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* Input box styling */
+.input-container input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #000000; /* Light grey border */
+  outline: none;
+  font-size: 18px;
+  margin-right: 8px;
+  opacity: 0.8;
+}
+
+/* Send button styling */
+.input-container button {
+  background: #007bff; /* Blue background */
+  border: none;
+  font-size: 14px;
+  color: #ffffff; /* White text */
+  cursor: pointer;
+  margin-left: 8px;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+/* Header styling */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 15px;
+  background: linear-gradient(to right, #007bff, #00c6ff); /* Blue gradient background */
+  color: #ffffff; /* White text */
+  font-size: 16px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.header .logo {
+  width: 100px;
+  height: 100px;
+  background-size: contain;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.nav {
+  display: grid;
+  grid-gap: 0px;
+  padding: 0px;
+}
+
+.nav .title {
+  padding-left: 5px;
+  grid-column: 1;
+}
+
+.diamond {
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  border-radius: 20%;
+  overflow: hidden;
+  padding-left: 20px;
+  padding-right: 20px;
+  opacity: 50%;
+}
+
+/* Favicon styling */
+.favicon {
+  width: 32px;
+  height: 32px;
+  border-radius: 30%;
+}
+
+/* Fade-in animation for landing page */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
